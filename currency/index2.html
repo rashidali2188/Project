@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange App</title>
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+    <style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .exchange-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .exchange-form label {
+        margin-top: 10px;
+    }
+
+    .exchange-form input,
+    .exchange-form select,
+    .exchange-form button {
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    .exchange-form button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .exchange-form button:hover {
+        background-color: #0056b3;
+    }
+
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+   
+
+    @media (max-width: 700px) {
+        .container {
+            max-width: 100%;
+            padding: 15px;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        #currency-search {
+            width: 90%;
+            margin-right: 0;
+        
+        }
+        #from-currency,
+        #to-currency {
+            width: 100%;
+            margin-right: 0;
+        }
+      
+        /* button,
+        #search-btn,
+        #convert-btn {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 10px;
+        } */
+          .btn2{
+             width: 100%;
+            margin-left: auto;
+            margin-top: 10px;
+            justify-content: center;
+        }
+        .exchange-form label {
+            display: block;
+            margin-top: 10px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .container {
+            padding: 5px;
+        }
+        h1 {
+            font-size: 1.1rem;
+        }
+        #result {
+            font-size: 18px;
+        }
+       /* button,
+        #search-btn,
+        #convert-btn 
+        { */
+         .btn2{
+align-items: center;
+text-align: center;
+         }
+      
+         
+          .btn2, #convert-btn{
+           max-width: 100%;
+          margin: auto;
+            margin-top: 10px;
+            justify-content: center;
+        }
+    }
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Exchange Application</h1>
+        <div class="exchange-form">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount" />
+            <!-- ...existing code... -->
+            <label for="currency-search">Search Currency:</label>
+            <input type="text" id="currency-search" placeholder="Type currency code or name" />
+            <div class="btn2">
+<button id="search-btn">Search</button>
+            </div>
+                
+            <!-- ...existing code... -->
+            <label for="from-currency">From:</label>
+            <select id="from-currency">
+                <option value="usd">USD - US Dollar</option>
+                <option value="eur">EUR - Euro</option>
+                <option value="pkr">PKR - Pakistani Rupee</option>
+                <option value="gbp">GBP - British Pound</option>
+                <option value="aud">AUD - Australian Dollar</option>
+                <option value="cad">CAD - Canadian Dollar</option>
+                <option value="jpy">JPY - Japanese Yen</option>
+                <option value="cny">CNY - Chinese Yuan</option>
+                <option value="sar">SAR - Saudi Riyal</option>
+                <option value="aed">AED - UAE Dirham</option>
+                <option value="inr">INR - Indian Rupee</option>
+                <option value="rub">RUB - Russian Ruble</option>
+                <option value="try">TRY - Turkish Lira</option>
+                <option value="brl">BRL - Brazilian Real</option>
+                <option value="ngn">NGN - Nigerian Naira</option>
+                <!-- مزید کرنسیز add کر سکتے ہیں -->
+            </select>
+            <label for="to-currency">To:</label>
+            <select id="to-currency">
+                <option value="usd">USD - US Dollar</option>
+                <option value="eur">EUR - Euro</option>
+                <option value="pkr">PKR - Pakistani Rupee</option>
+                <option value="gbp">GBP - British Pound</option>
+                <option value="aud">AUD - Australian Dollar</option>
+                <option value="cad">CAD - Canadian Dollar</option>
+                <option value="jpy">JPY - Japanese Yen</option>
+                <option value="cny">CNY - Chinese Yuan</option>
+                <option value="sar">SAR - Saudi Riyal</option>
+                <option value="aed">AED - UAE Dirham</option>
+                <option value="inr">INR - Indian Rupee</option>
+                <option value="rub">RUB - Russian Ruble</option>
+                <option value="try">TRY - Turkish Lira</option>
+                <option value="brl">BRL - Brazilian Real</option>
+                <option value="ngn">NGN - Nigerian Naira</option>
+                <!-- مزید کرنسیز add کر سکتے ہیں -->
+            </select>
+            <!-- <input id="amount" type="number" /> -->
+
+  <div class="btn2">
+  <button id="convert-btn">Convert</button>
+  </div>
+            <div id="result"></div>
+        </div>
+    </div>
+
+<script src="script2.js"></script>
+</body>
+
+</html>
